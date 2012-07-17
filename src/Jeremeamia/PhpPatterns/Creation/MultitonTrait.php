@@ -19,7 +19,8 @@ trait MultitonTrait
             if (!static::$instance) {
                 static::$instance = [];
             }
-            static::$instance[$key] = new static;
+            static::$instance[$key] = (new \ReflectionClass(get_called_class()))
+                ->newInstanceWithoutConstructor();
         }
 
         return static::$instance[$key];

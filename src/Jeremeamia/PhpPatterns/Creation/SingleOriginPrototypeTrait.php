@@ -12,7 +12,8 @@ trait SingleOriginPrototypeTrait
     public static function getInstance()
     {
         if (!static::$instance) {
-            static::$instance = new static;
+            static::$instance = (new \ReflectionClass(get_called_class()))
+                ->newInstanceWithoutConstructor();
         }
 
         return clone static::$instance;
