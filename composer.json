@@ -1,5 +1,5 @@
 {
-    "name": "Jeremeamia/PhpPatterns",
+    "name": "jeremeamia/php-design-patterns",
     "autoload": {
         "psr-0": {"Jeremeamia": "src/"}
     }
