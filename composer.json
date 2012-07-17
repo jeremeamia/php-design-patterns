@@ -1,0 +1,6 @@
+{
+    "name": "Jeremeamia/PhpPatterns",
+    "autoload": {
+        "psr-0": {"Jeremeamia": "src/"}
+    }
+}
