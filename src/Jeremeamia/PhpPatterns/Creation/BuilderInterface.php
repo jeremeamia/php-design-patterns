@@ -3,10 +3,10 @@
 namespace Jeremeamia\PhpPatterns\Creation;
 
 /**
- * This trait establishes the class as a Builder pattern and requires that
+ * This interface establishes the class as a Builder pattern and requires that
  * the build() method be implemented.
  */
-trait BuilderTrait
+interface BuilderInterface
 {
     /**
      * Performs the logic for building the desired object and returns the fully-
@@ -14,5 +14,5 @@ trait BuilderTrait
      *
      * @return mixed
      */
-    abstract public function build();
+    public function build();
 }

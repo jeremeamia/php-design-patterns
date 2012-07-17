@@ -11,13 +11,13 @@ namespace Jeremeamia\PhpPatterns\Collection;
  * Martin Fowler describes the Registry pattern as "A well-known object that
  * other objects can use to find common objects and services." In other words,
  * it is an object (whether a static, singleton, or instance) that contains
- * other objects or data, and keeps a references to those by a name or key. It's
+ * other objects or data, and keeps references to those by a name or key. It's
  * essentially a simplified associative array with an object-oriented interface.
  *
  * Registries are commonly used to keep track of objects and data that need to
- * be accessed in a global or wide context. Because of this, they are often designed
- * to be a static or singleton class, even though that is not necessary, and is
- * generally discouraged.
+ * be accessed in a global or wide context. Because of this, they are often
+ * designed to be a static or singleton class, even though that is not
+ * necessary, and is generally discouraged.
  *
  * Also, the basic interface and functionality of a Registry can be re-used to
  * form the basis of other array-like patterns. Therefore, the RegistryTrait is
@@ -56,7 +56,7 @@ trait RegistryTrait
     /**
      * Check to see if a key exists in the Registry
      *
-     * @param  string $key The key of the object/value to check
+     * @param string $key The key of the object/value to check
      *
      * @return bool Whether or not the ey exists
      */

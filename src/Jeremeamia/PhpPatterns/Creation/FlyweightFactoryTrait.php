@@ -6,7 +6,6 @@ use Jeremeamia\PhpPatterns\Collection\RegistryTrait;
 
 trait FlyweightFactoryTrait
 {
-    use FactoryTrait;
     use RegistryTrait;
 
     public function create($name, array $context = [])
