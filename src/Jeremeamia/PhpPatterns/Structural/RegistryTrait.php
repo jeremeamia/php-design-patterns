@@ -1,6 +1,6 @@
 <?php
 
-namespace Jeremeamia\PhpPatterns\Collection;
+namespace Jeremeamia\PhpPatterns\Structural;
 
 /**
  * The Registry Pattern
@@ -35,7 +35,7 @@ trait RegistryTrait
      */
     public function get($key, $default = null)
     {
-        return $this->has($key) ? $this->data[$key] : $default;
+        return $this->has($key) ? $this->getData()[$key] : $default;
     }
 
     /**
@@ -48,7 +48,8 @@ trait RegistryTrait
      */
     public function set($key, $value)
     {
-        $this->data[$key] = $value;
+        $data =& $this->getData();
+        $data[$key] = $value;
 
         return $this;
     }
@@ -62,7 +63,7 @@ trait RegistryTrait
      */
     public function has($key)
     {
-        return array_key_exists($key, $this->data);
+        return array_key_exists($key, $this->getData());
     }
 
     /**
@@ -74,7 +75,8 @@ trait RegistryTrait
      */
     public function remove($key)
     {
-        unset($this->data[$key]);
+        $data =& $this->getData();
+        unset($data[$key]);
 
         return $this;
     }
@@ -86,7 +88,8 @@ trait RegistryTrait
      */
     public function clear()
     {
-        $this->data = [];
+        $data =& $this->getData();
+        $data = [];
 
         return $this;
     }
@@ -96,9 +99,9 @@ trait RegistryTrait
      *
      * @return array All of the objects/data
      */
-    public function all()
+    public function getAll()
     {
-        return $this->data;
+        return $this->getData();
     }
 
     /**
@@ -108,6 +111,13 @@ trait RegistryTrait
      */
     public function isEmpty()
     {
-        return (0 === count($this->data));
+        return (0 === count($this->getData()));
     }
+
+    /**
+     * Get the array to operate on from the implementation
+     *
+     * @return array
+     */
+    abstract protected function & getData();
 }

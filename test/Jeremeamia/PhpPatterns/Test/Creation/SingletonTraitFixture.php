@@ -2,7 +2,7 @@
 
 namespace Jeremeamia\PhpPatterns\Test\Creation;
 
-use Jeremeamia\PhpPatterns\Creation\SingletonTrait;
+use Jeremeamia\PhpPatterns\Creational\SingletonTrait;
 
 class SingletonTraitFixture
 {

@@ -2,7 +2,7 @@
 
 namespace Jeremeamia\PhpPatterns\Test\Creation;
 
-use Jeremeamia\PhpPatterns\Creation\FlyweightFactoryTrait;
+use Jeremeamia\PhpPatterns\Creational\FlyweightFactoryTrait;
 
 class FlyweightFactoryTraitFixture
 {
@@ -14,5 +14,10 @@ class FlyweightFactoryTraitFixture
     {
         $class = '\\' . $name . 'Exception';
         return new $class;
+    }
+
+    protected function & getData()
+    {
+        return $this->data;
     }
 }

@@ -58,6 +58,6 @@ class RegistryTraitTest extends \PHPUnit_Framework_TestCase
             'foo2' => 'bar2',
             'foo3' => 'bar3'
         );
-        $this->assertEquals($expected, $this->registry->all());
+        $this->assertEquals($expected, $this->registry->getAll());
     }
 }

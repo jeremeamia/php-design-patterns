@@ -2,7 +2,7 @@
 
 namespace Jeremeamia\PhpPatterns\Test\Creation;
 
-use Jeremeamia\PhpPatterns\Creation\MultitonTrait;
+use Jeremeamia\PhpPatterns\Creational\MultitonTrait;
 
 class MultitonTraitFixture
 {

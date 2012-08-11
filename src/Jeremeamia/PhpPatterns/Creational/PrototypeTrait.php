@@ -1,6 +1,6 @@
 <?php
 
-namespace Jeremeamia\PhpPatterns\Creation;
+namespace Jeremeamia\PhpPatterns\Creational;
 
 trait PrototypeTrait
 {

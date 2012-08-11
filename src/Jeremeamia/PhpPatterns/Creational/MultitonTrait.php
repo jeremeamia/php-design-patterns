@@ -1,8 +1,6 @@
 <?php
 
-namespace Jeremeamia\PhpPatterns\Creation;
-
-use Jeremeamia\PhpPatterns\Collection\RegistryTrait;
+namespace Jeremeamia\PhpPatterns\Creational;
 
 trait MultitonTrait
 {

@@ -1,13 +1,23 @@
 <?php
 
-namespace Jeremeamia\PhpPatterns\Creation;
+namespace Jeremeamia\PhpPatterns\Creational;
 
-use Jeremeamia\PhpPatterns\Collection\RegistryTrait;
+use Jeremeamia\PhpPatterns\Structural\RegistryTrait;
 
+/**
+ *
+ */
 trait FlyweightFactoryTrait
 {
-    use RegistryTrait;
+    use FactoryTrait, RegistryTrait;
 
+    /**
+     *
+     *
+     * @param $name
+     * @param array $context
+     * @return mixed
+     */
     public function create($name, array $context = [])
     {
         $key = $this->calculateHashKey($name, $context);
