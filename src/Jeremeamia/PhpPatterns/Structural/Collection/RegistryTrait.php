@@ -25,6 +25,8 @@ namespace Jeremeamia\PhpPatterns\Structural\Collection;
  */
 trait RegistryTrait
 {
+    use HasDataTrait;
+
     /**
      * Get an object/value out of the Registry
      *
@@ -113,11 +115,4 @@ trait RegistryTrait
     {
         return (0 === count($this->getData()));
     }
-
-    /**
-     * Get the array to operate on from the implementation
-     *
-     * @return array
-     */
-    abstract protected function & getData();
 }

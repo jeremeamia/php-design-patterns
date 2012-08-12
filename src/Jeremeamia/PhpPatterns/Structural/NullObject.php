@@ -4,6 +4,7 @@ namespace Jeremeamia\PhpPatterns\Structural;
 
 class NullObject implements \Iterator, \Countable, \ArrayAccess
 {
+    // @codeCoverageIgnoreStart
     public function count() {}
     public function current() {}
     public function key() {}
@@ -19,4 +20,6 @@ class NullObject implements \Iterator, \Countable, \ArrayAccess
     public function __isset($key) {}
     public function __set($key, $value) {}
     public function __unset($key) {}
+    // @codeCoverageIgnoreEnd
 }
+// @codeCoverageIgnoreStart
