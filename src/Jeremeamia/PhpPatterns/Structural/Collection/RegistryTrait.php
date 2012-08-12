@@ -1,6 +1,6 @@
 <?php
 
-namespace Jeremeamia\PhpPatterns\Structural;
+namespace Jeremeamia\PhpPatterns\Structural\Collection;
 
 /**
  * The Registry Pattern

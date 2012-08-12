@@ -1,8 +1,8 @@
 <?php
 
-namespace Jeremeamia\PhpPatterns\Test\Collection;
+namespace Jeremeamia\PhpPatterns\Test\Structural\Collection;
 
-use Jeremeamia\PhpPatterns\Structural\RegistryTrait;
+use Jeremeamia\PhpPatterns\Structural\Collection\RegistryTrait;
 
 class RegistryTraitFixture
 {

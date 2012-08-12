@@ -1,6 +1,6 @@
 <?php
 
-namespace Jeremeamia\PhpPatterns\Test\Creation;
+namespace Jeremeamia\PhpPatterns\Test\Creational;
 
 class MultitonTraitTest extends \PHPUnit_Framework_TestCase
 {

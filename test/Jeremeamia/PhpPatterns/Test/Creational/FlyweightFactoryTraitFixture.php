@@ -1,6 +1,6 @@
 <?php
 
-namespace Jeremeamia\PhpPatterns\Test\Creation;
+namespace Jeremeamia\PhpPatterns\Test\Creational;
 
 use Jeremeamia\PhpPatterns\Creational\FlyweightFactoryTrait;
 

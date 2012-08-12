@@ -2,7 +2,7 @@
 
 namespace Jeremeamia\PhpPatterns\Creational;
 
-use Jeremeamia\PhpPatterns\Structural\RegistryTrait;
+use Jeremeamia\PhpPatterns\Structural\Collection\RegistryTrait;
 
 /**
  *

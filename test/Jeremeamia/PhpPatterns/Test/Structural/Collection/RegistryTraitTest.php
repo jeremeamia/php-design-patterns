@@ -1,6 +1,6 @@
 <?php
 
-namespace Jeremeamia\PhpPatterns\Test\Collection;
+namespace Jeremeamia\PhpPatterns\Test\Structural\Collection;
 
 class RegistryTraitTest extends \PHPUnit_Framework_TestCase
 {
