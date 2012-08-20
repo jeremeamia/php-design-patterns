@@ -4,7 +4,7 @@ namespace Jeremeamia\PhpPatterns\Test\Creational;
 
 use Jeremeamia\PhpPatterns\Creational\MultitonTrait;
 
-class MultitonTraitFixture
+class MultitonFixture
 {
     use MultitonTrait;
 }

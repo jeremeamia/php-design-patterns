@@ -6,7 +6,7 @@ class FlyweightFactoryTraitTest extends \PHPUnit_Framework_TestCase
 {
     public function testAlwaysReturnsSameInstanceByKey()
     {
-        $factory = new FlyweightFactoryTraitFixture;
+        $factory = new FlyweightFactoryFixture;
 
         $this->assertSame(
             $factory->create('Logic'),

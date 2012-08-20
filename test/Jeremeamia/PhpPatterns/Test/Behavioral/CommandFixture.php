@@ -5,7 +5,7 @@ namespace Jeremeamia\PhpPatterns\Test\Behavioral;
 use Jeremeamia\PhpPatterns\Behavioral\CommandTrait;
 use Jeremeamia\PhpPatterns\Structural\Collection\GetDataTrait;
 
-class CommandTraitFixture
+class CommandFixture
 {
     use CommandTrait, GetDataTrait;
 

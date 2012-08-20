@@ -4,7 +4,7 @@ namespace Jeremeamia\PhpPatterns\Test\Creational;
 
 use Jeremeamia\PhpPatterns\Creational\SingletonTrait;
 
-class SingletonTraitFixture
+class SingletonFixture
 {
     use SingletonTrait;
 

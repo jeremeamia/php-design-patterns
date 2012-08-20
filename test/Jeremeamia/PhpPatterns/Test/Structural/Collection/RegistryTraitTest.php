@@ -5,13 +5,13 @@ namespace Jeremeamia\PhpPatterns\Test\Structural\Collection;
 class RegistryTraitTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var RegistryTraitFixture The Registry fixture
+     * @var RegistryFixture The Registry fixture
      */
     public $registry;
 
     public function setup()
     {
-        $this->registry = new RegistryTraitFixture;
+        $this->registry = new RegistryFixture;
     }
 
     public function testIfIsEmptyInitially()

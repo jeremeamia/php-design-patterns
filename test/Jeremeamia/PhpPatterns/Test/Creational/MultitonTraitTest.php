@@ -7,26 +7,26 @@ class MultitonTraitTest extends \PHPUnit_Framework_TestCase
     public function testAlwaysReturnsSameInstanceByKey()
     {
         $this->assertSame(
-            MultitonTraitFixture::getNamedInstance('foo'),
-            MultitonTraitFixture::getNamedInstance('foo')
+            MultitonFixture::getNamedInstance('foo'),
+            MultitonFixture::getNamedInstance('foo')
         );
 
         $this->assertNotSame(
-            MultitonTraitFixture::getNamedInstance('foo'),
-            MultitonTraitFixture::getNamedInstance('bar')
+            MultitonFixture::getNamedInstance('foo'),
+            MultitonFixture::getNamedInstance('bar')
         );
     }
 
     public function testAlwaysReturnsSameInstanceForDefault()
     {
         $this->assertSame(
-            MultitonTraitFixture::getInstance(),
-            MultitonTraitFixture::getNamedInstance()
+            MultitonFixture::getInstance(),
+            MultitonFixture::getNamedInstance()
         );
 
         $this->assertSame(
-            MultitonTraitFixture::getNamedInstance(),
-            MultitonTraitFixture::getNamedInstance('__DEFAULT__')
+            MultitonFixture::getNamedInstance(),
+            MultitonFixture::getNamedInstance('__DEFAULT__')
         );
     }
 }

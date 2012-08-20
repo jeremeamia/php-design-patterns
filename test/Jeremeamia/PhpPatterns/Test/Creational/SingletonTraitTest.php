@@ -7,8 +7,8 @@ class SingletonTraitTest extends \PHPUnit_Framework_TestCase
     public function testAlwaysReturnsSameInstance()
     {
         $this->assertSame(
-            SingletonTraitFixture::getInstance(),
-            SingletonTraitFixture::getInstance()
+            SingletonFixture::getInstance(),
+            SingletonFixture::getInstance()
         );
     }
 
@@ -17,7 +17,7 @@ class SingletonTraitTest extends \PHPUnit_Framework_TestCase
      */
     public function testCannotBeInstantiateViaConstructor()
     {
-        $singleton = new SingletonTraitFixture;
+        $singleton = new SingletonFixture;
     }
 
     /**
@@ -25,7 +25,7 @@ class SingletonTraitTest extends \PHPUnit_Framework_TestCase
      */
     public function testCannotClone()
     {
-        $singleton1 = SingletonTraitFixture::getInstance();
+        $singleton1 = SingletonFixture::getInstance();
         $singleton2 = clone $singleton1;
     }
 
@@ -34,7 +34,7 @@ class SingletonTraitTest extends \PHPUnit_Framework_TestCase
      */
     public function testCannotUnserializeViaWakeup()
     {
-        $singleton1 = SingletonTraitFixture::getInstance();
+        $singleton1 = SingletonFixture::getInstance();
         $serialized = serialize($singleton1);
         $singleton2 = unserialize($serialized);
     }
@@ -44,7 +44,7 @@ class SingletonTraitTest extends \PHPUnit_Framework_TestCase
      */
     public function testCannotUnserializeViaInterface()
     {
-        $singleton = SingletonTraitFixture::getInstance();
+        $singleton = SingletonFixture::getInstance();
         $result = $singleton->unserialize('foo');
     }
 }

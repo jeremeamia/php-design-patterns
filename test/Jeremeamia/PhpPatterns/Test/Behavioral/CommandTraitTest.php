@@ -8,7 +8,7 @@ class CommandTraitTest extends \PHPUnit_Framework_TestCase
 {
     protected function getCommand()
     {
-        $command = new CommandTraitFixture();
+        $command = new CommandFixture();
         $command->set('operand1', 3);
         $command->set('operand2', 5);
 
