@@ -3,21 +3,15 @@
 namespace Jeremeamia\PhpPatterns\Test\Creational;
 
 use Jeremeamia\PhpPatterns\Creational\FlyweightFactoryTrait;
+use Jeremeamia\PhpPatterns\Structural\Collection\GetDataTrait;
 
 class FlyweightFactoryTraitFixture
 {
-    use FlyweightFactoryTrait;
-
-    protected $data = [];
+    use FlyweightFactoryTrait, GetDataTrait;
 
     protected function doCreate($name, array $context)
     {
         $class = '\\' . $name . 'Exception';
         return new $class;
-    }
-
-    protected function & getData()
-    {
-        return $this->data;
     }
 }
