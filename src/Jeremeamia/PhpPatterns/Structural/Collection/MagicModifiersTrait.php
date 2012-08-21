@@ -9,7 +9,7 @@ trait MagicModifiersTrait
     public function __get($key)
     {
         if (!$this->__isset($key)) {
-            throw new \DomainException("The key \"{$key}\" does not exist.");
+            throw new \OutOfBoundsException("The key \"{$key}\" does not exist.");
         }
 
         return $this->getData()[$key];

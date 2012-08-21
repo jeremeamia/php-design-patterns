@@ -8,11 +8,14 @@ Trait IndexedArrayAccessTrait
 
     public function offsetSet($offset, $value)
     {
-        if (!is_int($offset) || $offset < 0) {
+        $data =& $this->getData();
+
+        if (null === $offset) {
+            $offset = max(array_keys($data) ?: [-1]) + 1;
+        } elseif (!is_int($offset) || $offset < 0) {
             throw new \DomainException('The offset must be a integer greater than or equal to zero.');
         }
 
-        $data =& $this->getData();
         $data[$offset] = $value;
     }
 }
