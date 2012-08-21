@@ -26,4 +26,14 @@ class ProxyTraitTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(3, $proxy->count());
     }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testSetSubjectThrowsExceptionOnNonObjects()
+    {
+        /** @var $proxy \Jeremeamia\PhpPatterns\Behavioral\ProxyTrait */
+        $proxy = $this->getObjectForTrait('Jeremeamia\PhpPatterns\Behavioral\ProxyTrait');
+        $proxy->setSubject('foo');
+    }
 }
