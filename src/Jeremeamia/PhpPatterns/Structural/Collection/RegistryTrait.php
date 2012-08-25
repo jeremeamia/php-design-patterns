@@ -61,7 +61,7 @@ trait RegistryTrait
      *
      * @param string $key The key of the object/value to check
      *
-     * @return bool Whether or not the ey exists
+     * @return bool Whether or not the key exists
      */
     public function has($key)
     {
@@ -101,7 +101,7 @@ trait RegistryTrait
      *
      * @return array All of the objects/data
      */
-    public function getAll()
+    public function all()
     {
         return $this->getData();
     }

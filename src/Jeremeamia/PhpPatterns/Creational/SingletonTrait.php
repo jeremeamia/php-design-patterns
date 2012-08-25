@@ -31,8 +31,7 @@ trait SingletonTrait
      */
     public function __construct()
     {
-        throw new \RuntimeException('You may not explicitly instantiate this '
-            . 'object, because it is a singleton.');
+        throw new \RuntimeException('You may not explicitly instantiate this object, because it is a singleton.');
     }
 
     /**
@@ -42,8 +41,7 @@ trait SingletonTrait
      */
     public function __clone()
     {
-        throw new \RuntimeException('You may not clone this object, because it '
-            . 'is a singleton.');
+        throw new \RuntimeException('You may not clone this object, because it is a singleton.');
     }
 
     /**
@@ -53,8 +51,7 @@ trait SingletonTrait
      */
     public function __wakeup()
     {
-        throw new \RuntimeException('You may not unserialize this object, '
-            . 'because it is a singleton.');
+        throw new \RuntimeException('You may not unserialize this object, because it is a singleton.');
     }
 
     /**
@@ -64,7 +61,6 @@ trait SingletonTrait
      */
     public function unserialize($serialized_data)
     {
-        throw new \RuntimeException('You may not unserialize this object, '
-            . 'because it is a singleton.');
+        throw new \RuntimeException('You may not unserialize this object, because it is a singleton.');
     }
 }

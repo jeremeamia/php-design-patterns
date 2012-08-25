@@ -27,6 +27,7 @@ class CommandTraitTest extends \PHPUnit_Framework_TestCase
 
     public function testCanExecuteLikeClosure()
     {
+        /** @var $command callable */
         $command = $this->getCommand();
         $result  = $command();
 
@@ -39,7 +40,7 @@ class CommandTraitTest extends \PHPUnit_Framework_TestCase
 
         $this->assertFalse($command->isExecuted());
         $this->assertNull($command->getResult());
-        $this->assertNotEmpty($command->getAll());
+        $this->assertNotEmpty($command->all());
 
         $command->execute();
 
@@ -50,6 +51,6 @@ class CommandTraitTest extends \PHPUnit_Framework_TestCase
 
         $this->assertFalse($command->isExecuted());
         $this->assertNull($command->getResult());
-        $this->assertEmpty($command->getAll());
+        $this->assertEmpty($command->all());
     }
 }
